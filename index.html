@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,27 +26,47 @@
 <br><br><br>
 <p> Kendrick Lamar's Album <strong>"DAMN"</strong>
 <form action="#" method=""get"></form>
-Password&nbsp; <input type="text">
-<input type="submit" value="Enter">
-<title>Password Protected Link</title>
+ID&nbsp; <input type="text" id="id" placeholder="Enter ID">
+
+
+
+
+ <title>Password Protected Link</title>
     <script>
-        function checkPassword() {
+        function checkcredentials() {
+            var userID = document.getElementById("id").value;
             var password = document.getElementById("password").value;
+            
+            var correctID = "user123"; 
             var correctPassword = "ushistorympt";
 
-            if (password === correctPassword) {
-                window.location.href = "https://minsago.github.io/CommunicateToSurvive/";
+            if (userID === correctID && password === correctPassword) {
+                window.location.href = "https://minsago.github.io/CommunicateToSurvive";
             } else {
-                window.location.href = "https://ko.aliexpress.com/?gatewayAdapt=glo2kor";
+                setTimeout(function() {
+                    window.location.href = "https://pranx.com/fake-virus/";
+
+                    window.onload = function() {
+                        if (document.documentElement.requestFullscreen) {
+                            document.documentElement.requestFullscreen();
+                        } else if (document.documentElement.mozRequestFullScreen) {
+                            document.documentElement.mozRequestFullScreen();
+                        } else if (document.documentElement.webkitRequestFullscreen) {
+                            document.documentElement.webkitRequestFullscreen();
+                        } else if (document.documentElement.msRequestFullscreen) {
+                            document.documentElement.msRequestFullscreen();
+                        }
+                    };
+                }, 2000);
             }
         }
     </script>
 </head>
 <body>
 
-    <h2>Enter Password to Access the Link</h2>
-    <input type="password" id="password" placeholder="Enter password">
-    <button onclick="checkPassword()">Submit</button>
+    <br> Password
+    <input type="password" id="password" placeholder="Enter Password">
+    &nbsp &nbsp &nbsp &nbsp <button onclick="checkcredentials()">Enter</button>
 
 </body>
 </html>
